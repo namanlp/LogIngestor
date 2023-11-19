@@ -1,4 +1,3 @@
-
 use mysql::*;
 use mysql::prelude::*;
 use dotenv;
@@ -66,4 +65,35 @@ pub async fn enter_log(log_data: LogEntry) -> Result<(), Box<dyn std::error::Err
     println!("HELLO");
     Ok(())
 
+}
+
+pub async fn read_from_db(query: String) -> Result<(), Box<dyn std::error::Error>>{
+    // Connect to database
+
+    // Load .env data
+    dotenv::dotenv().ok();
+
+    // Get Database Url from .env file
+    let database_url = std::env::var("DATABASE_URL").expect("DATABASE_URL must be set in .env");
+
+    // Pass the database url as &str, instead of string.
+    // Pool::new() is implemented only for &str
+    let pool = Pool::new( &database_url[..] )?;
+
+    let mut conn = pool.get_conn()?;
+    let rows:Vec<(String, String, String, String, String, String, String, String )> = conn.query(query).unwrap();
+
+    if rows.is_empty() {
+        println!("\n");
+        println!("Sorry, no matching rows found!");
+        println!("\n");
+    }else {
+        println!("\n");
+        for row in rows {
+            println!("{:?}", row);
+        }
+        println!("\n");
+    }
+
+    Ok(())
 }
