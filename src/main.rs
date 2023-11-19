@@ -13,6 +13,11 @@ use log_ingestor::ingest;
 async fn main(){
 
     // Define Variable to run log ingestor
-    let log_ingestor_thread = ingest();
-    join!(log_ingestor_thread);
+    let log_ingestor_task = ingest();
+
+    // Define Variable to run Query Interface
+    let query_interface_task = query_interface::query_interface();
+
+    // Run both Log Ingestor and Query interface tasks asynchronously
+    join!(log_ingestor_task, query_interface_task);
 }
