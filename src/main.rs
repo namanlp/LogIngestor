@@ -4,6 +4,7 @@
 mod log_ingestor;
 mod log_entry_struct;
 mod query_interface;
+mod database_operations;
 
 // Using Functions
 use futures::join;

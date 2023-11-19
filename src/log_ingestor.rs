@@ -1,6 +1,7 @@
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
 
 use crate::log_entry_struct::LogEntry;
+use crate::database_operations::enter_log;
 
 
 // This
@@ -21,7 +22,8 @@ async fn log_ingestor(data: web::Json<LogEntry>) -> impl Responder {
 
     // Handling Log Entry Data
     // Replace with Database Operation Later
-    println!("Received log entry: {:?}", data);
+    // println!("Received log entry: {:?}", data);
+    enter_log(data.into_inner()).await.unwrap();
 
     // If log was ingested successfully, return success message
     HttpResponse::Ok().body("Log entry received successfully")
