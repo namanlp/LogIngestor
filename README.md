@@ -24,8 +24,7 @@ Log Ingestor and Query Interface in Rust Language
 - [x] Provide real-time log ingestion and searching capabilities.
 
 
-## Getting Started
+### Dependencies
 
-Here is the demonstration on how to 
-
-### Clone This 
+1. **Rust and Cargo :** Please Ensure that Rust and Cargo are installed and running.
+2. **MySql or Mariadb :** Install MariaDB or MySQL and ensure that it is running properly.
