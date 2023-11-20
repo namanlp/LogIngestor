@@ -154,3 +154,10 @@ Similarly, if you want all the logs that were logged on or after 10 September 20
 > ("error", "Failed to connect to DB", "server-1234", "2023-09-15 08:00:00", "abc-xyz-123", "span-456", "5e5342f", "server-0987")
 
 
+## Contact
+
+You can find my details on my ![https://github.com/namanlp](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+Feel free to open issues on this Repository. 
+
+And don't forget to star the repository and follow me on GitHub for more such amazing repositories!
