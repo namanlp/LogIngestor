@@ -156,7 +156,7 @@ Similarly, if you want all the logs that were logged on or after 10 September 20
 
 ## Contact
 
-You can find my details on my ![https://github.com/namanlp](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+You can find my details on my <a href="https://github.com/namanlp"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a>
 
 Feel free to open issues on this Repository. 
 
